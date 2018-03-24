@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  Hls.Events.FRAG_BUFFERED hlsFragBuffered url = https://hls-hw.xvideos-cdn.com/videos/hls/e2/0d/f6/e20df66af765a044505d5665f3635cbc/hls-360p25.ts?e=1517635763&l=0&h=5a3732acf864858ddbf7e4e6fdb957dc
+</head>
+<body>
+
+
+
+
+
+  <script>
+  var cheerio = require("cheerio"),
+      http = require("http"),
+      qs = require("querystring"),
+      url = require("url");
+
+  var XVideos = module.exports;
+
+  XVideos.resolveId = function resolveId(id, cb) {
+    if (typeof id !== "number") {
+      return cb(Error("wrong type for id; expected number but got " + typeof id));
+    }
+
+    var req = http.get("http://www.xvideos.com/video" + id, function(res) {
+      if (res.statusCode === 404) {
+        return cb(Error("video not found"));
+      }
+
+      if (res.statusCode !== 301) {
+        return cb(Error("incorrect status code; expected 301 but got " + res.statusCode));
+      }
+
+      return cb(null, res.headers.location);
+    });
+
+    req.once("error", cb);
+  };
+
+  XVideos.details = function details(url, cb) {
+    var req = http.get(url, function(res) {
+      var body = Buffer(0);
+
+      res.on("readable", function() {
+        var chunk;
+        while (chunk = res.read()) {
+          body = Buffer.concat([body, chunk]);
+        }
+      });
+
+      if (res.statusCode === 404) {
+        return cb(Error("video not found"));
+      }
+
+      if (res.statusCode !== 200) {
+        return cb(Error("incorrect status code; expected 200 but got " + res.statusCode));
+      }
+
+      res.on("end", function() {
+        body = body.toString("utf8");
+
+        var $ = cheerio.load(body);
+
+        var title = $("#main > h2").text().replace(/-[^-]+$/, "").trim();
+
+        var tags = $("#video-tags > li > a").map(function(i, e) {
+          return $(e).text().trim();
+        }).filter(function(e) {
+          return e !== "tags";
+        });
+
+        var duration = $(".duration").text().trim().replace(/^-/, "").trim();
+
+        var flv;
+        if (matches = body.match(/flv_url=(http%3A%2F%2F.+?)&amp;/)) {
+          flv = unescape(matches[1]);
+        }
+        if (!flv) {
+          return cb(Error("couldn't find flv"));
+        }
+
+        var thumb;
+        if (matches = body.match(/url_bigthumb=(http:\/\/.+?)&amp;/)) {
+          thumb = unescape(matches[1]);
+        }
+
+        return cb(null, {title: title, duration: duration, tags: tags, flv: flv, thumb: thumb});
+      });
+    });
+
+    req.once("error", cb);
+  };
+
+  XVideos.constructSearchUrl = function constructSearchUrl(parameters) {
+    return "http://www.xvideos.com/?" + qs.stringify(parameters);
+  };
+
+  XVideos.search = function search(parameters, cb) {
+    var req = http.get(this.constructSearchUrl(parameters), function(res) {
+      var body = Buffer(0);
+
+      res.on("readable", function() {
+        var chunk;
+        while (chunk = res.read()) {
+          body = Buffer.concat([body, chunk]);
+        }
+      });
+
+      if (res.statusCode !== 200) {
+        return cb(Error("incorrect status code; expected 200 but got " + res.statusCode));
+      }
+
+      res.on("end", function() {
+        body = body.toString("utf8");
+
+        var $ = cheerio.load(body);
+
+        var videos = $(".thumbBlock > .thumbInside").map(function(i, e) {
+          var find;
+
+          if ($(e).find("script").length) {
+            find = cheerio.load($(e).find("script").text().replace(/^thumbcastDisplayRandomThumb\('(.+?)'\);$/, "$1"));
+          } else {
+            find = $(e).find.bind($(e));
+          }
+
+          return {
+            url: url.resolve("http://www.xvideos.com/", find("div.thumb > a").attr("href").replace("/THUMBNUM/", "/")),
+            title: find("p > a").text(),
+            duration: $(e).find("span.duration").text().replace(/[\(\)]/g, "").trim(),
+          };
+        });
+
+        var total = parseInt($("h3.blackTitle").text().replace(/[\r\n]/g, " ").replace(/^.*- (\d+) results.*$/, "$1"), 10);
+
+        return cb(null, {total: total, videos: videos});
+      });
+    });
+
+    req.once("error", cb);
+  };
+
+
+
+
+
+
+
+          logged_user = false;
+          var static_id_cdn = 2;
+          var html5player = new HTML5Player('html5video', '27181775');
+          html5player.setVideoTitle('Beautiful Young Girl Hardcore Fucks Grandpa In the Forrest gets facial cum');
+          html5player.setSponsors([{"link":"http:\/\/www.oldje.com\/","desc":"Oldje.com provide original and exclusive content that combine romantic sex and a little fetish (old, crusty and fat man in their 70s which are seduced by young and very beautiful girls)","records2257":"http:\/\/www.classmedia.com\/public\/usc2257.html","name":"Oldje"}]);
+          html5player.setVideoUrlLow('https://vid1-l3.xvideos-cdn.com/videos/3gp/e/2/0/xvideos.com_e20df66af765a044505d5665f3635cbc.mp4?e=1517635502&ri=1024&rs=85&h=c74c258e71150451bd925e791b446df3');
+          html5player.setVideoUrlHigh('https://vid1-l3.xvideos-cdn.com/videos/mp4/e/2/0/xvideos.com_e20df66af765a044505d5665f3635cbc.mp4?e=1517635502&ri=1024&rs=85&h=76622a31ccdd4f1ca07e8d38f9ba33d3');
+          html5player.setVideoHLS('https://hls-hw.xvideos-cdn.com/videos/hls/e2/0d/f6/e20df66af765a044505d5665f3635cbc/hls.m3u8?e=1517635502&l=0&h=22c84919970c3943cd9285377a6d7440');
+          html5player.setThumbUrl('https://img-hw.xvideos-cdn.com/videos/thumbslll/e2/0d/f6/e20df66af765a044505d5665f3635cbc/e20df66af765a044505d5665f3635cbc.2.jpg');
+          html5player.setThumbUrl169('https://img-hw.xvideos-cdn.com/videos/thumbs169lll/e2/0d/f6/e20df66af765a044505d5665f3635cbc/e20df66af765a044505d5665f3635cbc.3.jpg');
+          html5player.setRelated(video_related);
+          html5player.setThumbSlide('https://img-hw.xvideos-cdn.com/videos/thumbs169/e2/0d/f6/e20df66af765a044505d5665f3635cbc/mozaique.jpg');
+          html5player.setThumbSlideBig('https://img-hw.xvideos-cdn.com/videos/thumbs169/e2/0d/f6/e20df66af765a044505d5665f3635cbc/mozaiquefull.jpg');
+          html5player.setIdCDN('3');
+          html5player.setIdCdnHLS('2');
+          html5player.setFakePlayer(false);
+          html5player.setDesktopiew(false);
+          html5player.setUploaderName('cindyca');
+          html5player.setVideoURL('https://www.xvideos.com/video27181775/beautiful_young_girl_hardcore_fucks_grandpa_in_the_forrest_gets_facial_cum');
+          html5player.setStaticDomain('static-hw.xvideos.com');
+          html5player.setHttps();
+          html5player.setCanUseHttps();
+          html5player.initPlayer();
+    document.getElementById('html5video').style.display = '';
+   if (!html5player) {  function createRequestObject() { var xhr; try { xhr = new XMLHttpRequest(); } catch (e) { xhr = new ActiveXObject("Microsoft.XMLHTTP"); } return xhr; } var js_error = createRequestObject(); js_error.open('GET', '/html5player/jserror/27181775/2', true); js_error.send(); }
+  </script>
+
+</body>
+</html>

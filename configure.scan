@@ -1,0 +1,77 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ([2.69])
+AC_INIT([FULL-PACKAGE-NAME], [VERSION], [BUG-REPORT-ADDRESS])
+AC_CONFIG_SRCDIR([main.cc])
+AC_CONFIG_HEADERS([config.h])
+
+# Checks for programs.
+AC_PROG_AWK
+AC_PROG_CXX
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_PROG_LN_S
+AC_PROG_MAKE_SET
+
+# Checks for libraries.
+# FIXME: Replace `main' with a function in `-lboost_filesystem':
+AC_CHECK_LIB([boost_filesystem], [main])
+# FIXME: Replace `main' with a function in `-lboost_system':
+AC_CHECK_LIB([boost_system], [main])
+# FIXME: Replace `main' with a function in `-ljsoncpp':
+AC_CHECK_LIB([jsoncpp], [main])
+# FIXME: Replace `main' with a function in `-lsqlite3':
+AC_CHECK_LIB([sqlite3], [main])
+# FIXME: Replace `main' with a function in `-luuid':
+AC_CHECK_LIB([uuid], [main])
+
+# Checks for header files.
+AC_CHECK_HEADERS([netinet/in.h string.h sys/ioctl.h sys/socket.h sys/time.h unistd.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_CHECK_HEADER_STDBOOL
+AC_C_INLINE
+AC_TYPE_UINT16_T
+AC_TYPE_UINT64_T
+
+# Checks for library functions.
+AC_FUNC_MALLOC
+AC_CHECK_FUNCS([gettimeofday memset select strchr strdup])
+
+AC_CONFIG_FILES([Makefile
+                 SQLString/Makefile
+                 cookie/Makefile
+                 createJSON/Makefile
+                 html/node_modules/array-includes/Makefile
+                 html/node_modules/batch/Makefile
+                 html/node_modules/coa/GNUmakefile
+                 html/node_modules/debug/Makefile
+                 html/node_modules/delayed-stream/Makefile
+                 html/node_modules/es-abstract/Makefile
+                 html/node_modules/es-to-primitive/Makefile
+                 html/node_modules/eslint/node_modules/debug/Makefile
+                 html/node_modules/extsprintf/Makefile
+                 html/node_modules/fileset/Makefile
+                 html/node_modules/foreach/Makefile
+                 html/node_modules/indexof/Makefile
+                 html/node_modules/is-callable/Makefile
+                 html/node_modules/is-date-object/Makefile
+                 html/node_modules/is-regex/Makefile
+                 html/node_modules/is-symbol/Makefile
+                 html/node_modules/isarray/Makefile
+                 html/node_modules/istanbul-lib-source-maps/node_modules/debug/Makefile
+                 html/node_modules/json-stringify-safe/Makefile
+                 html/node_modules/node-forge/Makefile
+                 html/node_modules/progress/Makefile
+                 html/node_modules/sockjs/Makefile
+                 html/node_modules/svgo/Makefile
+                 html/node_modules/sw-precache-webpack-plugin/Makefile
+                 html/node_modules/toposort/Makefile
+                 html/node_modules/webpack-dev-server/node_modules/debug/Makefile
+                 html/node_modules/xtend/Makefile
+                 reg/Makefile
+                 sql/Makefile
+                 sql/int/Makefile])
+AC_CONFIG_SUBDIRS([html/node_modules/node-forge/setup])
+AC_OUTPUT

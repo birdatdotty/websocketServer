@@ -1,0 +1,16 @@
+all: test
+
+test: main.o auth.o actions.o
+	g++ main.o auth.o -ljsoncpp actions.o -o$@
+
+main.o: main.cc ../auth/auth.h
+	g++ -c main.cc
+
+auth.o: ../auth/auth.cc ../auth/auth.h
+	g++ -c ../auth/auth.cc
+
+actions.o: actions.cc
+	g++ -c actions.cc
+
+clean:
+	/bin/rm ./*.o

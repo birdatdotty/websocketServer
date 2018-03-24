@@ -1,0 +1,2 @@
+noinst_LTLIBRARIES = libt1.la
+libt1_la_SOURCES = t1.cc

@@ -1,0 +1,32 @@
+all:  server
+
+# server: main.o cookie/uuid.o obj/CServer.o  obj/proxy.o obj/SQLString.o obj/sqlite.o obj/toSQL.o obj/pathFinder.o obj/myAuth.o obj/sql.o obj/log.o obj/setAction.o obj/zip.o
+server: main.o obj/CServer.o obj/proxy.o obj/log.o
+	g++ main.o obj/CServer.o obj/proxy.o obj/log.o -lboost_system -lboost_filesystem -lsqlite3 -ljsoncpp -o$@
+
+main.o: main.cc
+	g++ -c main.cc
+# obj/uuid: cookie/uuid.o
+# 	g++ -c cookie/uuid.cc
+obj/CServer.o: CServer/CServer.cc CServer/CServer.h proxy/proxy.h
+	g++ -c CServer/CServer.cc -o$@
+obj/proxy.o: proxy/proxy.cc proxy/proxy.h
+	g++ -c proxy/proxy.cc -o$@
+# obj/sqlite.o: createJSON/sqlite.cc
+# 	g++ -c createJSON/sqlite.cc -o$@
+# obj/SQLString.o: ./SQLString/SQLString.cc ./SQLString/SQLString.h
+# 	g++ -std=c++11 -c ./SQLString/SQLString.cc -o$@
+# obj/toSQL.o: createJSON/toSQL.cc
+# 	g++ -c createJSON/toSQL.cc -o$@
+# obj/setAction.o: createJSON/setAction.cc
+# 	g++ -c createJSON/setAction.cc -o$@
+# obj/pathFinder.o: createJSON/pathFinder.cc
+# 	g++ -c createJSON/pathFinder.cc -o$@
+# obj/myAuth.o: ./reg/myAuth.cc ./reg/ACAuth.h ./reg/myAuth.h
+# 	g++ -c ./reg/myAuth.cc -o$@
+# obj/sql.o: ./sql/sql.cc ./sql/sql.h
+# 	g++ -std=c++11 -c ./sql/sql.cc -o$@
+obj/log.o: ./log/log.cc ./log/log.h
+	g++ -std=c++11 -c ./log/log.cc -o$@
+# obj/zip.o: ./zip/zip.cc
+# 	g++ -std=c++11 -c ./zip/zip.cc -o$@

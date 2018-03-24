@@ -1,0 +1,210 @@
+[2018-01-26 03:44:14] [application] Running telemetry server on port __ 9000 using docroot=.
+[2018-01-26 03:44:14] [info] asio listen error: system:98 (Address already in use)
+terminate called after throwing an instance of 'websocketpp::exception'
+  what():  Underlying Transport Error
+[2018-01-26 03:44:19] [application] Running telemetry server on port __ 9000 using docroot=.
+[2018-01-26 03:44:19] [info] asio listen error: system:98 (Address already in use)
+terminate called after throwing an instance of 'websocketpp::exception'
+  what():  Underlying Transport Error
+[2018-01-26 03:44:25] [application] Running telemetry server on port __ 9000 using docroot=.
+[2018-01-26 03:44:25] [info] asio listen error: system:98 (Address already in use)
+terminate called after throwing an instance of 'websocketpp::exception'
+  what():  Underlying Transport Error
+[2018-01-26 03:44:28] [application] Running telemetry server on port __ 9000 using docroot=.
+[2018-01-26 03:44:28] [info] asio listen error: system:98 (Address already in use)
+terminate called after throwing an instance of 'websocketpp::exception'
+  what():  Underlying Transport Error
+[2018-01-26 03:44:45] [application] Running telemetry server on port __ 9000 using docroot=.
+[2018-01-26 03:44:45] [info] asio listen error: system:98 (Address already in use)
+terminate called after throwing an instance of 'websocketpp::exception'
+  what():  Underlying Transport Error
+[2018-01-26 03:45:27] [application] Running telemetry server on port __ 9000 using docroot=.
+[2018-01-26 03:45:47] [connect] WebSocket Connection [::1]:56386 v13 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36" /ws 101
+ctx: {"action":"auth","data":{"login":"gluck","password":"fgtkmcby"}}
+Action: <auth>
+key: <>
+key: <>
+login,passwordgluck, fgtkmcby
+validPassord validPassord validPassord
+password is correct!
+{
+	"action" : "auth",
+	"data" : 
+	{
+		"key" : "742a3e71-dc59-4c83-8728-48492981bace",
+		"login" : "gluck",
+		"status" : true
+	}
+}
+{"action":"auth","data":{"key":"742a3e71-dc59-4c83-8728-48492981bace","login":"gluck","status":true}}
+
+callback: {"action":"auth","data":{"login":"gluck","password":"fgtkmcby"}}
+ctx: {"action":"CHAT_GET","data":{"login":"Петя","msg":"asdasd"},"key":"742a3e71-dc59-4c83-8728-48492981bace"}
+Action: <CHAT_GET>
+key: <742a3e71-dc59-4c83-8728-48492981bace>
+key: <gluck>
+callback: {"action":"CHAT_GET","data":{"login":"Петя","msg":"asdasd"},"key":"742a3e71-dc59-4c83-8728-48492981bace"}
+ctx: {"action":"SET_SCHEDULE","data":{"msg":{"lesson":["Музыка","Математика","Русский  язык","Ин. язык (англ.) (Слыш)","Ин. язык (англ.) (Керобян)","Окружающий мир","Литературное чтение","Физическая культура"],"page":"/schedule.html","room":["291","46","238","284","МФЗ"],"schedule":[{"day":"Понедельник","lessons":[{"lesson":7,"n":1,"room":0,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3},{"lesson":7,"n":5,"room":4,"teacher":6,"time":4}]},{"day":"Вторник","lessons":[{"lesson":2,"n":1,"room":1,"teacher":1,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":4,"teacher":2,"time":3}]},{"day":"Среда","lessons":[{"lesson":2,"n":1,"room":1,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Пятница","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Суббота","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]}],"status":8491,"teacher":["Турищева Н.И.","Васильева Т.А.","Слыш И.Р.","Керобян В.В.","Паценко А.В.","Физическая культура","Паценко А.В.","Вася"],"time":["8:20 - 9:05","9:20 - 10:05","10:25 - 11:10","11:20 - 12:05","12:20 - 13:05"]}},"key":"742a3e71-dc59-4c83-8728-48492981bace"}
+Action: <SET_SCHEDULE>
+key: <742a3e71-dc59-4c83-8728-48492981bace>
+key: <gluck>
+sql:INSERT INTO misc(misc,data)VALUES ('schedule','{"lesson":["Музыка","Математика","Русский  язык","Ин. язык (англ.) (Слыш)","Ин. язык (англ.) (Керобян)","Окружающий мир","Литературное чтение","Физическая культура"],"page":"/schedule.html","room":["291","46","238","284","МФЗ"],"schedule":[{"day":"Понедельник","lessons":[{"lesson":7,"n":1,"room":0,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3},{"lesson":7,"n":5,"room":4,"teacher":6,"time":4}]},{"day":"Вторник","lessons":[{"lesson":2,"n":1,"room":1,"teacher":1,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":4,"teacher":2,"time":3}]},{"day":"Среда","lessons":[{"lesson":2,"n":1,"room":1,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Пятница","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Суббота","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]}],"status":8491,"teacher":["Турищева Н.И.","Васильева Т.А.","Слыш И.Р.","Керобян В.В.","Паценко А.В.","Физическая культура","Паценко А.В.","Вася"],"time":["8:20 - 9:05","9:20 - 10:05","10:25 - 11:10","11:20 - 12:05","12:20 - 13:05"]}'::jsonb )ON CONFLICT (misc)DO UPDATE SET data='{"lesson":["Музыка","Математика","Русский  язык","Ин. язык (англ.) (Слыш)","Ин. язык (англ.) (Керобян)","Окружающий мир","Литературное чтение","Физическая культура"],"page":"/schedule.html","room":["291","46","238","284","МФЗ"],"schedule":[{"day":"Понедельник","lessons":[{"lesson":7,"n":1,"room":0,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3},{"lesson":7,"n":5,"room":4,"teacher":6,"time":4}]},{"day":"Вторник","lessons":[{"lesson":2,"n":1,"room":1,"teacher":1,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":4,"teacher":2,"time":3}]},{"day":"Среда","lessons":[{"lesson":2,"n":1,"room":1,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Пятница","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Суббота","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]}],"status":8491,"teacher":["Турищева Н.И.","Васильева Т.А.","Слыш И.Р.","Керобян В.В.","Паценко А.В.","Физическая культура","Паценко А.В.","Вася"],"time":["8:20 - 9:05","9:20 - 10:05","10:25 - 11:10","11:20 - 12:05","12:20 - 13:05"]}'::jsonb
+callback: {"action":"SET_SCHEDULE","data":{"msg":{"lesson":["Музыка","Математика","Русский  язык","Ин. язык (англ.) (Слыш)","Ин. язык (англ.) (Керобян)","Окружающий мир","Литературное чтение","Физическая культура"],"page":"/schedule.html","room":["291","46","238","284","МФЗ"],"schedule":[{"day":"Понедельник","lessons":[{"lesson":7,"n":1,"room":0,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3},{"lesson":7,"n":5,"room":4,"teacher":6,"time":4}]},{"day":"Вторник","lessons":[{"lesson":2,"n":1,"room":1,"teacher":1,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":4,"teacher":2,"time":3}]},{"day":"Среда","lessons":[{"lesson":2,"n":1,"room":1,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Пятница","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Суббота","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]}],"status":8491,"teacher":["Турищева Н.И.","Васильева Т.А.","Слыш И.Р.","Керобян В.В.","Паценко А.В.","Физическая культура","Паценко А.В.","Вася"],"time":["8:20 - 9:05","9:20 - 10:05","10:25 - 11:10","11:20 - 12:05","12:20 - 13:05"]}},"key":"742a3e71-dc59-4c83-8728-48492981bace"}
+ctx: {"action":"SET_SCHEDULE","data":{"msg":{"lesson":["Музыка","Математика","Русский  язык","Ин. язык (англ.) (Слыш)","Ин. язык (англ.) (Керобян)","Окружающий мир","Литературное чтение","Физическая культура"],"page":"/schedule.html","room":["291","46","238","284","МФЗ"],"schedule":[{"day":"Понедельник","lessons":[{"lesson":7,"n":1,"room":0,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3},{"lesson":7,"n":5,"room":4,"teacher":6,"time":4}]},{"day":"Вторник","lessons":[{"lesson":2,"n":1,"room":4,"teacher":1,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":4,"teacher":2,"time":3}]},{"day":"Среда","lessons":[{"lesson":2,"n":1,"room":1,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Пятница","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Суббота","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]}],"status":818251,"teacher":["Турищева Н.И.","Васильева Т.А.","Слыш И.Р.","Керобян В.В.","Паценко А.В.","Физическая культура","Паценко А.В.","Вася"],"time":["8:20 - 9:05","9:20 - 10:05","10:25 - 11:10","11:20 - 12:05","12:20 - 13:05"]}},"key":"742a3e71-dc59-4c83-8728-48492981bace"}
+Action: <SET_SCHEDULE>
+key: <742a3e71-dc59-4c83-8728-48492981bace>
+key: <gluck>
+sql:INSERT INTO misc(misc,data)VALUES ('schedule','{"lesson":["Музыка","Математика","Русский  язык","Ин. язык (англ.) (Слыш)","Ин. язык (англ.) (Керобян)","Окружающий мир","Литературное чтение","Физическая культура"],"page":"/schedule.html","room":["291","46","238","284","МФЗ"],"schedule":[{"day":"Понедельник","lessons":[{"lesson":7,"n":1,"room":0,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3},{"lesson":7,"n":5,"room":4,"teacher":6,"time":4}]},{"day":"Вторник","lessons":[{"lesson":2,"n":1,"room":4,"teacher":1,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":4,"teacher":2,"time":3}]},{"day":"Среда","lessons":[{"lesson":2,"n":1,"room":1,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Пятница","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Суббота","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]}],"status":818251,"teacher":["Турищева Н.И.","Васильева Т.А.","Слыш И.Р.","Керобян В.В.","Паценко А.В.","Физическая культура","Паценко А.В.","Вася"],"time":["8:20 - 9:05","9:20 - 10:05","10:25 - 11:10","11:20 - 12:05","12:20 - 13:05"]}'::jsonb )ON CONFLICT (misc)DO UPDATE SET data='{"lesson":["Музыка","Математика","Русский  язык","Ин. язык (англ.) (Слыш)","Ин. язык (англ.) (Керобян)","Окружающий мир","Литературное чтение","Физическая культура"],"page":"/schedule.html","room":["291","46","238","284","МФЗ"],"schedule":[{"day":"Понедельник","lessons":[{"lesson":7,"n":1,"room":0,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3},{"lesson":7,"n":5,"room":4,"teacher":6,"time":4}]},{"day":"Вторник","lessons":[{"lesson":2,"n":1,"room":4,"teacher":1,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":4,"teacher":2,"time":3}]},{"day":"Среда","lessons":[{"lesson":2,"n":1,"room":1,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Пятница","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Суббота","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]}],"status":818251,"teacher":["Турищева Н.И.","Васильева Т.А.","Слыш И.Р.","Керобян В.В.","Паценко А.В.","Физическая культура","Паценко А.В.","Вася"],"time":["8:20 - 9:05","9:20 - 10:05","10:25 - 11:10","11:20 - 12:05","12:20 - 13:05"]}'::jsonb
+callback: {"action":"SET_SCHEDULE","data":{"msg":{"lesson":["Музыка","Математика","Русский  язык","Ин. язык (англ.) (Слыш)","Ин. язык (англ.) (Керобян)","Окружающий мир","Литературное чтение","Физическая культура"],"page":"/schedule.html","room":["291","46","238","284","МФЗ"],"schedule":[{"day":"Понедельник","lessons":[{"lesson":7,"n":1,"room":0,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3},{"lesson":7,"n":5,"room":4,"teacher":6,"time":4}]},{"day":"Вторник","lessons":[{"lesson":2,"n":1,"room":4,"teacher":1,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":4,"teacher":2,"time":3}]},{"day":"Среда","lessons":[{"lesson":2,"n":1,"room":1,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Пятница","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Суббота","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]}],"status":818251,"teacher":["Турищева Н.И.","Васильева Т.А.","Слыш И.Р.","Керобян В.В.","Паценко А.В.","Физическая культура","Паценко А.В.","Вася"],"time":["8:20 - 9:05","9:20 - 10:05","10:25 - 11:10","11:20 - 12:05","12:20 - 13:05"]}},"key":"742a3e71-dc59-4c83-8728-48492981bace"}
+ctx: {"action":"CHAT_GET","data":{"login":"Петя","msg":"sss"},"key":"742a3e71-dc59-4c83-8728-48492981bace"}
+Action: <CHAT_GET>
+key: <742a3e71-dc59-4c83-8728-48492981bace>
+key: <gluck>
+callback: {"action":"CHAT_GET","data":{"login":"Петя","msg":"sss"},"key":"742a3e71-dc59-4c83-8728-48492981bace"}
+[2018-01-26 04:49:58] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-26 04:49:58] [disconnect] Disconnect close local:[1006,End of File] remote:[1006]
+[2018-01-26 11:17:01] [connect] WebSocket Connection [::ffff:127.0.0.1]:54108 v13 "Mozilla/5.0 (Linux; Android 6.0.1; Redmi 3S Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 YaBrowser/17.11.1.628.00 Mobile Safari/537.36" /ws 101
+[2018-01-26 11:17:29] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-26 11:17:29] [disconnect] Disconnect close local:[1006,End of File] remote:[1001]
+[2018-01-26 11:17:31] [connect] WebSocket Connection [::1]:58024 v13 "Mozilla/5.0 (Linux; Android 6.0.1; Redmi 3S Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 YaBrowser/17.11.1.628.00 Mobile Safari/537.36" /ws 101
+[2018-01-26 11:17:39] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-26 11:17:39] [disconnect] Disconnect close local:[1006,End of File] remote:[1006]
+[2018-01-26 11:19:06] [connect] WebSocket Connection [::1]:58026 v13 "Mozilla/5.0 (Linux; Android 6.0.1; Redmi 3S Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 YaBrowser/17.11.1.628.00 Mobile Safari/537.36" /ws 101
+[2018-01-26 11:19:18] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-26 11:19:18] [disconnect] Disconnect close local:[1006,End of File] remote:[1001]
+[2018-01-26 15:41:24] [connect] WebSocket Connection [::ffff:127.0.0.1]:55080 v13 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36" /ws 101
+[2018-01-26 15:42:12] [connect] WebSocket Connection [::1]:58996 v13 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36" /ws 101
+[2018-01-26 16:41:25] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-26 16:41:25] [disconnect] Disconnect close local:[1006,End of File] remote:[1006]
+[2018-01-26 16:42:12] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-26 16:42:12] [disconnect] Disconnect close local:[1006,End of File] remote:[1006]
+[2018-01-26 16:43:39] [connect] WebSocket Connection [::ffff:127.0.0.1]:55324 v13 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36" /ws 101
+[2018-01-26 17:43:39] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-26 17:43:39] [disconnect] Disconnect close local:[1006,End of File] remote:[1006]
+[2018-01-26 20:09:55] [connect] WebSocket Connection [::ffff:127.0.0.1]:56126 v13 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36" /ws 101
+[2018-01-26 20:15:22] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-26 20:15:22] [disconnect] Disconnect close local:[1006,End of File] remote:[1001]
+[2018-01-26 20:15:23] [connect] WebSocket Connection [::ffff:127.0.0.1]:56134 v13 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36" /ws 101
+ctx: {"action":"auth","data":{"login":"gluck","password":"fgtkmcby"}}
+Action: <auth>
+key: <>
+key: <>
+login,passwordgluck, fgtkmcby
+validPassord validPassord validPassord
+password is correct!
+{
+	"action" : "auth",
+	"data" : 
+	{
+		"key" : "43da678b-fdf6-4572-b4cc-f77bc72beeec",
+		"login" : "gluck",
+		"status" : true
+	}
+}
+{"action":"auth","data":{"key":"43da678b-fdf6-4572-b4cc-f77bc72beeec","login":"gluck","status":true}}
+
+callback: {"action":"auth","data":{"login":"gluck","password":"fgtkmcby"}}
+[2018-01-26 21:16:41] [connect] WebSocket Connection [::1]:60292 v13 "Mozilla/5.0 (Linux; Android 6.0.1; MI MAX Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Safari/537.36" /ws 101
+[2018-01-26 21:17:09] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-26 21:17:09] [disconnect] Disconnect close local:[1006,End of File] remote:[1001]
+[2018-01-26 21:17:09] [connect] WebSocket Connection [::ffff:127.0.0.1]:56380 v13 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36" /ws 101
+ctx: {"action":"auth","data":{"login":"gluck","password":"fgtkmcby"}}
+Action: <auth>
+key: <>
+key: <>
+login,passwordgluck, fgtkmcby
+validPassord validPassord validPassord
+password is correct!
+{
+	"action" : "auth",
+	"data" : 
+	{
+		"key" : "c9b4660c-8f69-4596-b348-ad1411b02337",
+		"login" : "gluck",
+		"status" : true
+	}
+}
+{"action":"auth","data":{"key":"c9b4660c-8f69-4596-b348-ad1411b02337","login":"gluck","status":true}}
+
+callback: {"action":"auth","data":{"login":"gluck","password":"fgtkmcby"}}
+ctx: {"action":"CHAT_GET","data":{"login":"Петя","msg":"sdfsdf"},"key":"c9b4660c-8f69-4596-b348-ad1411b02337"}
+Action: <CHAT_GET>
+key: <c9b4660c-8f69-4596-b348-ad1411b02337>
+key: <gluck>
+callback: {"action":"CHAT_GET","data":{"login":"Петя","msg":"sdfsdf"},"key":"c9b4660c-8f69-4596-b348-ad1411b02337"}
+[2018-01-26 21:22:29] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-26 21:22:29] [disconnect] Disconnect close local:[1006,End of File] remote:[1001]
+ctx: {"action":"SET_SCHEDULE","data":{"msg":{"lesson":["Музыка","Математика","Русский  язык","Ин. язык (англ.) (Слыш)","Ин. язык (англ.) (Керобян)","Окружающий мир","Литературное чтение","Физическая культура"],"page":"/schedule.html","room":["291","46","238","284","МФЗ"],"schedule":[{"day":"Понедельник","lessons":[{"lesson":7,"n":1,"room":0,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3},{"lesson":7,"n":5,"room":4,"teacher":6,"time":4}]},{"day":"Вторник","lessons":[{"lesson":2,"n":1,"room":4,"teacher":1,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":4,"teacher":2,"time":3}]},{"day":"Среда","lessons":[{"lesson":2,"n":1,"room":1,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Пятница","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Суббота","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]}],"status":981100,"teacher":["Турищева Н.И.","Васильева Т.А.","Слыш И.Р.","Керобян В.В.","Паценко А.В.","Физическая культура","Паценко А.В.","Вася"],"time":["8:20 - 9:05","9:20 - 10:05","10:25 - 11:10","11:20 - 12:05","12:20 - 13:05"]}},"key":"c9b4660c-8f69-4596-b348-ad1411b02337"}
+Action: <SET_SCHEDULE>
+key: <c9b4660c-8f69-4596-b348-ad1411b02337>
+key: <gluck>
+sql:INSERT INTO misc(misc,data)VALUES ('schedule','{"lesson":["Музыка","Математика","Русский  язык","Ин. язык (англ.) (Слыш)","Ин. язык (англ.) (Керобян)","Окружающий мир","Литературное чтение","Физическая культура"],"page":"/schedule.html","room":["291","46","238","284","МФЗ"],"schedule":[{"day":"Понедельник","lessons":[{"lesson":7,"n":1,"room":0,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3},{"lesson":7,"n":5,"room":4,"teacher":6,"time":4}]},{"day":"Вторник","lessons":[{"lesson":2,"n":1,"room":4,"teacher":1,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":4,"teacher":2,"time":3}]},{"day":"Среда","lessons":[{"lesson":2,"n":1,"room":1,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Пятница","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Суббота","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]}],"status":981100,"teacher":["Турищева Н.И.","Васильева Т.А.","Слыш И.Р.","Керобян В.В.","Паценко А.В.","Физическая культура","Паценко А.В.","Вася"],"time":["8:20 - 9:05","9:20 - 10:05","10:25 - 11:10","11:20 - 12:05","12:20 - 13:05"]}'::jsonb )ON CONFLICT (misc)DO UPDATE SET data='{"lesson":["Музыка","Математика","Русский  язык","Ин. язык (англ.) (Слыш)","Ин. язык (англ.) (Керобян)","Окружающий мир","Литературное чтение","Физическая культура"],"page":"/schedule.html","room":["291","46","238","284","МФЗ"],"schedule":[{"day":"Понедельник","lessons":[{"lesson":7,"n":1,"room":0,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3},{"lesson":7,"n":5,"room":4,"teacher":6,"time":4}]},{"day":"Вторник","lessons":[{"lesson":2,"n":1,"room":4,"teacher":1,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":4,"teacher":2,"time":3}]},{"day":"Среда","lessons":[{"lesson":2,"n":1,"room":1,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Пятница","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Суббота","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]}],"status":981100,"teacher":["Турищева Н.И.","Васильева Т.А.","Слыш И.Р.","Керобян В.В.","Паценко А.В.","Физическая культура","Паценко А.В.","Вася"],"time":["8:20 - 9:05","9:20 - 10:05","10:25 - 11:10","11:20 - 12:05","12:20 - 13:05"]}'::jsonb
+callback: {"action":"SET_SCHEDULE","data":{"msg":{"lesson":["Музыка","Математика","Русский  язык","Ин. язык (англ.) (Слыш)","Ин. язык (англ.) (Керобян)","Окружающий мир","Литературное чтение","Физическая культура"],"page":"/schedule.html","room":["291","46","238","284","МФЗ"],"schedule":[{"day":"Понедельник","lessons":[{"lesson":7,"n":1,"room":0,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3},{"lesson":7,"n":5,"room":4,"teacher":6,"time":4}]},{"day":"Вторник","lessons":[{"lesson":2,"n":1,"room":4,"teacher":1,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":4,"teacher":2,"time":3}]},{"day":"Среда","lessons":[{"lesson":2,"n":1,"room":1,"teacher":7,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":6,"n":3,"room":1,"teacher":1,"time":2},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Пятница","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]},{"day":"Суббота","lessons":[{"lesson":0,"n":1,"room":0,"teacher":0,"time":0},{"lesson":1,"n":2,"room":1,"teacher":1,"time":1},{"lesson":2,"n":3,"room":1,"teacher":1,"time":2},{"lesson":3,"n":4,"room":2,"teacher":2,"time":3},{"lesson":4,"n":4,"room":2,"teacher":2,"time":3}]}],"status":981100,"teacher":["Турищева Н.И.","Васильева Т.А.","Слыш И.Р.","Керобян В.В.","Паценко А.В.","Физическая культура","Паценко А.В.","Вася"],"time":["8:20 - 9:05","9:20 - 10:05","10:25 - 11:10","11:20 - 12:05","12:20 - 13:05"]}},"key":"c9b4660c-8f69-4596-b348-ad1411b02337"}
+[2018-01-26 22:28:43] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-26 22:28:43] [disconnect] Disconnect close local:[1006,End of File] remote:[1006]
+[2018-01-27 03:49:02] [connect] WebSocket Connection [::ffff:127.0.0.1]:57838 v13 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36" /ws 101
+[2018-01-27 03:49:02] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-27 03:49:02] [disconnect] Disconnect close local:[1006,End of File] remote:[1001]
+[2018-01-27 06:08:55] [connect] WebSocket Connection [::1]:34030 v13 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36" /ws 101
+[2018-01-27 06:48:45] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-27 06:48:45] [disconnect] Disconnect close local:[1006,End of File] remote:[1001]
+[2018-01-27 06:48:45] [connect] WebSocket Connection [::1]:34178 v13 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36" /ws 101
+[2018-01-27 06:52:20] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-27 06:52:20] [disconnect] Disconnect close local:[1006,End of File] remote:[1001]
+[2018-01-27 06:52:21] [connect] WebSocket Connection [::ffff:127.0.0.1]:58510 v13 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36" /ws 101
+ctx: {"action":"auth","data":{"login":"gluck","password":"fgtkmcby"}}
+Action: <auth>
+key: <>
+key: <>
+login,passwordgluck, fgtkmcby
+validPassord validPassord validPassord
+password is correct!
+{
+	"action" : "auth",
+	"data" : 
+	{
+		"key" : "ca08a719-5d93-4535-a247-1be61da8d5fb",
+		"login" : "gluck",
+		"status" : true
+	}
+}
+{"action":"auth","data":{"key":"ca08a719-5d93-4535-a247-1be61da8d5fb","login":"gluck","status":true}}
+
+callback: {"action":"auth","data":{"login":"gluck","password":"fgtkmcby"}}
+ctx: {"action":"CHAT_GET","data":{"login":"Петя","msg":"asdsad"},"key":"ca08a719-5d93-4535-a247-1be61da8d5fb"}
+Action: <CHAT_GET>
+key: <ca08a719-5d93-4535-a247-1be61da8d5fb>
+key: <gluck>
+callback: {"action":"CHAT_GET","data":{"login":"Петя","msg":"asdsad"},"key":"ca08a719-5d93-4535-a247-1be61da8d5fb"}
+[2018-01-27 06:53:59] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-27 06:53:59] [disconnect] Disconnect close local:[1006,End of File] remote:[1001]
+[2018-01-27 06:54:00] [connect] WebSocket Connection [::1]:34200 v13 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36" /ws 101
+ctx: {"action":"auth","data":{"login":"gluck","password":"fgtkmcby"}}
+Action: <auth>
+key: <>
+key: <>
+login,passwordgluck, fgtkmcby
+validPassord validPassord validPassord
+password is correct!
+{
+	"action" : "auth",
+	"data" : 
+	{
+		"key" : "6c36e118-5812-490a-a05d-7d454bf87c54",
+		"login" : "gluck",
+		"status" : true
+	}
+}
+{"action":"auth","data":{"key":"6c36e118-5812-490a-a05d-7d454bf87c54","login":"gluck","status":true}}
+
+callback: {"action":"auth","data":{"login":"gluck","password":"fgtkmcby"}}
+ctx: {"action":"CHAT_GET","data":{"login":"Петя","msg":"sdafdsf"},"key":"6c36e118-5812-490a-a05d-7d454bf87c54"}
+Action: <CHAT_GET>
+key: <6c36e118-5812-490a-a05d-7d454bf87c54>
+key: <gluck>
+callback: {"action":"CHAT_GET","data":{"login":"Петя","msg":"sdafdsf"},"key":"6c36e118-5812-490a-a05d-7d454bf87c54"}
+[2018-01-27 06:55:46] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-27 06:55:46] [disconnect] Disconnect close local:[1006,End of File] remote:[1001]
+[2018-01-27 06:55:47] [connect] WebSocket Connection [::ffff:127.0.0.1]:58520 v13 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36" /ws 101
+[2018-01-27 07:32:06] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+[2018-01-27 07:32:06] [disconnect] Disconnect close local:[1006,End of File] remote:[1001]
